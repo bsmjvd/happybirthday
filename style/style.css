@@ -305,4 +305,11 @@ body {
     font-size: 1.5rem;
     font-weight: lighter;
   }
+   .six .hat{
+    top:-150px ;
+  }
+  .six img{
+    width: auto;
+    height: 300px;
+  }
 }
