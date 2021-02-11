@@ -279,7 +279,7 @@ window.addEventListener('load', function () {
         var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         var source = audioCtx.createBufferSource();
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'audio-autoplay.wav');
+        xhr.open('GET', 'hbd.mp3');
         xhr.responseType = 'arraybuffer';
         xhr.addEventListener('load', function (r) {
             audioCtx.decodeAudioData(
@@ -287,7 +287,7 @@ window.addEventListener('load', function () {
                     function (buffer) {
                         source.buffer = buffer;
                         source.connect(audioCtx.destination);
-                        source.loop = false;
+                        source.loop = true;
                     });
             source.start(0);
         });
